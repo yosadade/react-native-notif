@@ -1,7 +1,7 @@
 {
-  "name": "RNN_NOTIFICATION",
+  "name": "rnn_notification",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -10,16 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-navigation/drawer": "^5.12.4",
-    "@react-navigation/native": "^5.9.3",
-    "@react-navigation/stack": "^5.14.3",
-    "@shopify/restyle": "^1.4.0",
-    "axios": "^0.21.1",
     "hermes-engine": "^0.5.2-rc1",
-    "moti": "^0.8.2",
-    "native-base": "^2.15.2",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.8.0",
@@ -27,13 +19,6 @@
     "react-native-redash": "^14.2.1",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^2.18.1",
-    "react-native-size-matters": "^0.4.0",
-    "react-native-svg": "^12.1.0",
-    "react-native-vector-icons": "^8.1.0",
-    "react-redux": "^7.2.2",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
-    "socket.io-client": "^2.1.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -48,5 +33,17 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "toast message component for React Native.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosadade/react-native-notif.git"
+  },
+  "author": "yosadade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosadade/react-native-notif/issues"
+  },
+  "homepage": "https://github.com/yosadade/react-native-notif#readme"
 }

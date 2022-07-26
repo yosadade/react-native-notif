@@ -1,31 +1,38 @@
-import React, {useEffect} from 'react';
-import 'react-native-gesture-handler';
-import {ThemeProvider} from '@shopify/restyle';
-import {theme} from './src/components';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
+import {NativeModules, View, Text, TouchableOpacity} from 'react-native';
 
-/* Notification Navigator */
-import {NotificationNavigator} from './src/components/Notification';
+const Notifications = () => {
+  const {ToastExample} = NativeModules;
 
-const AppStack = createStackNavigator();
-
-export default function App() {
+  const showToast = () => {
+    console.log(NativeModules);
+    ToastExample.show('ini adalah toast', 3000);
+  };
   return (
-    <ThemeProvider {...{theme}}>
-      <NavigationContainer>
-        <SafeAreaProvider>
-          <AppStack.Navigator
-            headerMode="none"
-            initialRouteName="NotificationApp">
-            <AppStack.Screen
-              name="NotificationApp"
-              component={NotificationNavigator}
-            />
-          </AppStack.Navigator>
-        </SafeAreaProvider>
-      </NavigationContainer>
-    </ThemeProvider>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: 'primary',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <Text>Kotlin/React Native Toast</Text>
+
+      <View>
+        <TouchableOpacity
+          style={{
+            width: '100%',
+            height: '100%',
+            justifyContent: 'center',
+            backgroundColor: 'red',
+            borderRadius: 30,
+          }}
+          onPress={showToast}>
+          <Text>Trigger</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
-}
+};
+
+export default Notifications;
