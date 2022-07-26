@@ -8,27 +8,46 @@ const Notifications = () => {
     console.log(NativeModules);
     ToastExample.show('ini adalah toast', 3000);
   };
+
+  const showNotif = () => {
+    console.log('Show notif');
+  };
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: 'primary',
+        backgroundColor: 'cyan',
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Kotlin/React Native Toast</Text>
+      <Text>Kotlin/React Native Native Module</Text>
 
       <View>
         <TouchableOpacity
           style={{
-            width: '100%',
-            height: '100%',
+            marginTop: 20,
+            width: 200,
+            padding: 20,
+            alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: 'red',
             borderRadius: 30,
           }}
           onPress={showToast}>
-          <Text>Trigger</Text>
+          <Text>Toast</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            marginTop: 20,
+            width: 200,
+            padding: 20,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'red',
+            borderRadius: 30,
+          }}
+          onPress={showNotif}>
+          <Text>Notification</Text>
         </TouchableOpacity>
       </View>
     </View>
