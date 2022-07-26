@@ -1,4 +1,4 @@
-package com.barter_app
+package com.rnn_notification
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

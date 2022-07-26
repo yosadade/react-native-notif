@@ -1,4 +1,4 @@
-package com.barter_app;
+package com.rnn_notification;
 
 import android.widget.Toast
 import com.facebook.react.bridge.NativeModule
